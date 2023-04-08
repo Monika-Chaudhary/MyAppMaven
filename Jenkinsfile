@@ -5,6 +5,7 @@ node{
         	checkout scmGit(branches: [[name: '*/main']], extensions: [cleanBeforeCheckout()], userRemoteConfigs: [[url: 'https://github.com/Monika-Chaudhary/MyAppMaven.git']])
     	}
     	stage('Maven Build'){
+		sh 'java -version'
 		//if setting.xml of project then use- sh '$M2_HOME/bin/mvn clean install --settings $setting'
 	    	sh '$M2_HOME/bin/mvn clean install'
   	}
