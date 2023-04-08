@@ -10,6 +10,6 @@ node{
 	    	sh '$M2_HOME/bin/mvn clean install'
   	}
     	stage('JUnit test cases'){
-	    junit '**/test-reports/*.xml'
+	    junit '**/surefire-reports/*.xml'
     	}
 }
